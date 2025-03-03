@@ -1,6 +1,6 @@
 {
-  "name": "troyeeboutique",
-  "homepage": "https://troyeeboutiquehouse.com",
+  "name": "onisbd",
+  "homepage": "https://onisbd.com",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -11,12 +11,11 @@
     "preview": "vite preview"
   },
   "keywords": [
-    "troyeeboutique",
-    "lailafashion",
-    "troyee",
-    "boutique",
-    "house",
-    "troyeeboutiquehouse.com"
+    "onisbd",
+    "Oni's Closet ",
+    "Closet",
+    "Oni's",
+    "onisbd.com"
   ],
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",

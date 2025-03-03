@@ -1,5 +1,5 @@
 {
-  "name": "troyeeboutique",
+  "name": "onisbd",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,12 +9,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "troyeeboutique",
-    "lailafashion",
-    "troyee",
-    "boutique",
-    "house",
-    "troyeeboutiquehouse.com"
+    "onisbd",
+    "Oni's Closet ",
+    "Closet",
+    "Oni's",
+    "onisbd.com"
   ],
   "author": "",
   "license": "ISC",
