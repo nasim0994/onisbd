@@ -49,7 +49,7 @@ export default function Banner() {
                       gallery?.url
                     }`}
                     alt={gallery?.title}
-                    className="w-full h-52 sm:h-80 object-cover rounded hover:cursor-grab"
+                    className="w-full h-60 sm:h-[430px] object-cover rounded hover:cursor-grab"
                   />
                 </SwiperSlide>
               ))}
