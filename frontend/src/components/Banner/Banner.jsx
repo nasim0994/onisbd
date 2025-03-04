@@ -1,5 +1,10 @@
 import { useGetBannerQuery } from "../../Redux/banner/banner";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Autoplay, Pagination } from "swiper/modules";
+
 export default function Banner() {
   const { data } = useGetBannerQuery();
   const banner = data?.data;
@@ -7,37 +12,48 @@ export default function Banner() {
   return (
     <section className="py-5 sm:py-7">
       <div className="container">
-        <div className="flex flex-col justify-center items-center gap-4 text-center">
-          <h2 className="text-3xl sm:text-5xl text-primary font-bold">
-            {banner?.title}
-          </h2>
-          <p className="text-lg sm:text-xl font-medium text-neutral">
-            {banner?.description}
-          </p>
-          <div className="w-full h-60 sm:h-[450px]">
-            {banner?.videoUrl ? (
-              <iframe
-                width="100%"
-                height="100%"
-                src={`https://www.youtube.com/embed/${banner?.videoUrl}?autoplay=0&mute=1`}
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-                title="YouTube Video"
-                referrerPolicy="strict-origin-when-cross-origin"
-                style={{ borderRadius: "10px" }}
-              ></iframe>
-            ) : (
-              <div className="h-[370] bg-black">Loading...</div>
-            )}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 items-center">
+          <div>
+            <h2 className="text-3xl sm:text-5xl text-primary font-bold">
+              {banner?.title}
+            </h2>
+            <p className="sm:mt-4 text-lg sm:text-xl font-medium">
+              {banner?.description}
+            </p>
+
+            <div className="mt-8">
+              <a
+                href="#order"
+                className="bg-primary text-base-100 px-4 py-2 rounded"
+              >
+                Click to order
+              </a>
+            </div>
           </div>
 
-          <div className="mt-5">
-            <a
-              href="#order"
-              className="bg-primary text-base-100 px-4 py-2 rounded"
+          <div className="-order-1 md:order-1">
+            <Swiper
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              pagination={true}
+              modules={[Autoplay, Pagination]}
+              loop={true}
+              grabCursor={true}
             >
-              এখানে অর্ডার করুন
-            </a>
+              {banner?.galleries?.map((gallery) => (
+                <SwiperSlide key={gallery?._id}>
+                  <img
+                    src={`${import.meta.env.VITE_BACKEND_URL}/banner/${
+                      gallery?.url
+                    }`}
+                    alt={gallery?.title}
+                    className="w-full h-52 sm:h-80 object-cover rounded hover:cursor-grab"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </div>

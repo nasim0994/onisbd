@@ -133,9 +133,9 @@ export default function Order() {
       <div className="container">
         <div className="border-2 border-primary rounded p-5 sm:p-10 bg-secondary/5">
           <h2 className="sm:text-xl font-semibold text-center">
-            অর্ডার করতে আপনার সঠিক তথ্য দিয়ে নিচের ফর্মটি সম্পূর্ণ পূরন করুন।
-            <br /> (আগে থেকে কোন টাকা দেয়া লাগবে না। প্রোডাক্ট হাতে পাবার পর
-            টাকা দিবেন)
+            To order, please fill out the form below with your correct
+            information. <br /> (No advance payment is required. Payment will be
+            made upon receipt of the product)
           </h2>
 
           <form
@@ -148,14 +148,14 @@ export default function Order() {
               <div className="flex flex-col gap-3">
                 <div>
                   <small className="text-neutral-content">
-                    আপনার নাম লিখুন *
+                    Enter your name
                   </small>
                   <input type="text" name="name" required />
                 </div>
 
                 <div>
                   <small className="text-neutral-content">
-                    আপনার মোবাইল নাম্বারটি লিখুন *
+                    Enter your mobile number *
                   </small>
                   <input type="number" name="number" required />
                   {validPhone && (
@@ -165,14 +165,14 @@ export default function Order() {
 
                 <div>
                   <small className="text-neutral-content">
-                    আপনার শহরের নাম লিখুন *
+                    Enter your city *
                   </small>
                   <input type="text" name="city" required />
                 </div>
 
                 <div>
                   <small className="text-neutral-content">
-                    আপনার সম্পূর্ণ ঠিকানা লিখুন *
+                    Enter your full address *
                   </small>
                   <textarea name="address" rows="4" required></textarea>
                 </div>
@@ -202,7 +202,7 @@ export default function Order() {
                         </div>
                       </div>
                       <div>
-                        <p>{product?.price} টাকা</p>
+                        <p>{product?.price} TK</p>
                       </div>
                     </>
                   ) : (
@@ -240,7 +240,7 @@ export default function Order() {
                 <div className="flex justify-between items-center border-b py-2.5 border-dashed border-gray-400">
                   <p className="text-neutral-content">Subtotal</p>
                   <p className="text-primary flex items-center gap-px">
-                    {product ? quantity * product?.price : "00"} টাকা
+                    {product ? quantity * product?.price : "00"} TK
                   </p>
                 </div>
 
@@ -264,7 +264,7 @@ export default function Order() {
                         htmlFor="insideDhaka"
                         className="ms-2 text-sm font-medium"
                       >
-                        ঢাকার ভিতরে: {shippingCharge?.insideDhaka} টাকা
+                        Inside Dhaka: {shippingCharge?.insideDhaka} TK
                       </label>
                     </div>
                     <div className="flex items-center">
@@ -285,7 +285,7 @@ export default function Order() {
                         htmlFor="outsideDhaka"
                         className="ms-2 text-sm font-medium"
                       >
-                        ঢাকার বাহিরে: {shippingCharge?.outsideDhaka} টাকা
+                        Outside Dhaka: {shippingCharge?.outsideDhaka} TK
                       </label>
                     </div>
                   </div>
@@ -293,14 +293,14 @@ export default function Order() {
 
                 <div className="flex justify-between items-center mt-2 font-medium text-lg">
                   <p className="text-neutral-content">Total</p>
-                  <p className="text-primary">{product ? total : "00"} টাকা</p>
+                  <p className="text-primary">{product ? total : "00"} TK</p>
                 </div>
 
                 <div className="mt-4 bg-gray-100 p-4 rounded text-neutral-content">
-                  <h2>ক্যাশ অন ডেলিভারি</h2>
+                  <h2>Cash on delivery</h2>
                   <div className="relative bg-gray-200 p-3 rounded mt-3">
                     <p className="text-sm">
-                      পণ্য হাতে পেয়ে ডেলিভারি ম্যানকে পেমেন্ট করতে পারবেন।
+                      You can pay the delivery man after receiving the product.
                     </p>
 
                     <div className="absolute -top-8 left-6">
@@ -313,7 +313,7 @@ export default function Order() {
                   <button className="text-center w-full bg-primary text-base-100 rounded py-2.5 font-semibold">
                     {isLoading
                       ? "Loading..."
-                      : `অর্ডার কনফার্ম করুন - ${product ? total : "00"} টাকা`}
+                      : `Confirm order - ${product ? total : "00"} TK`}
                   </button>
                 </div>
               </div>
@@ -322,7 +322,7 @@ export default function Order() {
         </div>
 
         <div className="mt-2 sm:mt-10 sm:text-xl font-semibold flex flex-col justify-center items-center text-center">
-          <p>অর্ডার করতে অথবা বিস্তারিত জানতে সরাসরি কল করুনঃ</p>
+          <p>To order or for more information, call directly:</p>
           <span className="flex text-primary items-center gap-1 text-lg sm:text-2xl">
             <MdAddCall />
             <span className="whitespace-nowrap">{contactInfo?.phone}</span>

@@ -34,7 +34,9 @@ export default function App() {
     if (seoData?.custom?.google_tag_manager) document.head.appendChild(script);
   }, [seoData]);
 
-  if (!authChecked) return <Spinner />;
+  if (!authChecked) {
+    return <Spinner />;
+  }
 
   return (
     <>
@@ -60,7 +62,7 @@ export default function App() {
         />
         <meta
           name="designer"
-          content={seoData?.basic?.designer || "Your Page Designer"}
+          content={seoData?.basic?.designer || "Nasim Uddin"}
         />
         <meta
           name="subject"

@@ -59,7 +59,7 @@ export default function FAQ() {
             href="#order"
             className="bg-primary text-base-100 px-4 py-2 rounded"
           >
-            এখানে অর্ডার করুন
+            Click to order
           </a>
         </div>
       </div>

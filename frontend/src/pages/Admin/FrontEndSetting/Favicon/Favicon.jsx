@@ -30,7 +30,6 @@ export default function Favicon() {
       let res = await update({ id, formData });
       if (res?.data?.success) {
         toast.success(res?.data?.message || "Favicon added successfully");
-        setImages([]);
       } else {
         toast.error(res?.data?.message || "Something went wrong");
         console.log(res);

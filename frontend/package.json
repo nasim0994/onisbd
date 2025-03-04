@@ -12,10 +12,8 @@
   },
   "keywords": [
     "onisbd",
-    "Oni's Closet ",
-    "Closet",
-    "Oni's",
-    "onisbd.com"
+    "https://onisbd.com",
+    "www.onisbd.com"
   ],
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
@@ -41,7 +39,7 @@
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react-swc": "^3.3.2",
     "autoprefixer": "^10.4.16",
-    "eslint": "^9.21.0",
+    "eslint": "^8.45.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",

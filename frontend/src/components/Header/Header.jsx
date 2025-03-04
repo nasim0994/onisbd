@@ -18,7 +18,7 @@ export default function Header() {
           </Link>
 
           <a href="#order" className="primary_btn text-sm">
-            অর্ডার করুন
+            Click to order
           </a>
         </div>
       </div>

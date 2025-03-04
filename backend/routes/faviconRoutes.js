@@ -7,7 +7,7 @@ const {
   updateFavicon,
 } = require("../controllers/faviconController");
 
-let uploadFavicon = singleUploder("./uploads/favicon", 1024 * 1024, "icon");
+let uploadFavicon = singleUploder("./uploads/favicon", 100 * 1024, "icon");
 
 router.get("/all", getFavicon);
 
@@ -15,7 +15,7 @@ router.post("/add", (req, res, next) => {
   uploadFavicon(req, res, (err) => {
     if (err) {
       return res.json({
-        message: `${err?.message}! max size 1mb`,
+        message: `${err?.message}! max size 100kb`,
         error: err,
       });
     }
