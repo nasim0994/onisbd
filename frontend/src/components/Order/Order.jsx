@@ -131,7 +131,7 @@ export default function Order() {
   return (
     <section ref={orderRef} className="py-5 sm:py-10" id="order">
       <div className="container">
-        <div className="border-2 border-primary rounded p-5 sm:p-10 bg-secondary/5">
+        <div className="border-2 border-primary rounded p-5 sm:p-10 bg-secondary/50">
           <h2 className="sm:text-xl font-semibold text-center">
             To order, please fill out the form below with your correct
             information. <br /> (No advance payment is required. Payment will be
